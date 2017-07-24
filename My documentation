@@ -1,0 +1,154 @@
+FORMAT: 1A
+HOST: http://localhost:3000/extracurricularactivities
+
+# Student Organizations API
+
+Student Organization is an API for listing and collecting data about extra curricular activities of students of the University.
+
+## Extra Curricular Activities [/extracurricularactivities]
+### List of All Extra Curricular Activities [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "id": 1,
+                "name": "Md Kamaruzzaman Ahmed",
+                "department": "CSE",
+                "interest": "Programming",
+                "created_at": "2017-07-21T21:38:57.899Z",
+                "updated_at": "2017-07-21T21:50:45.077Z"
+            },
+            {
+                "id": 2,
+                "name": "Md Idrees Ali",
+                "department": "Agriculture",
+                "interest": "Gardening",
+                "created_at": "2017-07-21T21:39:43.287Z",
+                "updated_at": "2017-07-21T21:39:43.287Z"
+            },
+            {
+                "id": 3,
+                "name": "Shahana Pavin",
+                "department": "FineArts",
+                "interest": "Painting",
+                "created_at": "2017-07-21T21:40:29.006Z",
+                "updated_at": "2017-07-21T21:40:29.006Z"
+            },
+            {
+                "id": 5,
+                "name": "Azam Khan",
+                "department": "ICE",
+                "interest": "Playing",
+                "created_at": "2017-07-23T07:33:02.852Z",
+                "updated_at": "2017-07-23T07:33:02.852Z"
+            },
+            {
+                "id": 7,
+                "name": "Shorif Mahmud",
+                "department": "EEE",
+                "interest": "Game development",
+                "created_at": "2017-07-24T02:39:05.943Z",
+                "updated_at": "2017-07-24T02:39:05.943Z"
+            },
+            {
+                "id": 8,
+                "name": "Mehedi Hasan Jony",
+                "department": "CSE",
+                "interest": "Social Work",
+                "created_at": "2017-07-24T02:41:05.640Z",
+                "updated_at": "2017-07-24T02:41:05.640Z"
+            }
+        ]
+
+### Add an Extra Curricular Activity [POST]
+
++ Request (application/json)
+
+        [
+                {
+   
+                    "name": "Mehedi Hasan Jony",
+                    "department": "CSE",
+                    "interest": "Social Work"
+     
+                }
+        ]
+    
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: localhost:3000/extracurricularactivities/8
+
+    + Body
+    
+            [
+                {
+                    "id": 8,
+                    "name": "Mehedi Hasan Jony",
+                    "department": "CSE",
+                    "interest": "Social Work",
+                    "created_at": "2017-07-24T02:41:05.640Z",
+                    "updated_at": "2017-07-24T02:41:05.640Z"
+                }
+            ]
+
+
+### Update an Existing Extra Curricular Activity [PUT]
+
++ Request (application/json)
+
+        [
+            {
+   
+                    "name": "Mehedi Hasan Jony",
+                    "department": "ICE",
+                    "interest": "Networking"
+     
+            }
+        ]
+    
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: localhost:3000/extracurricularactivities/8
+
+    + Body
+    
+            [
+                {
+                    
+                    "id": 8,
+                    "name": "Mehedi Hasan Jony",
+                    "department": "ICE",
+                    "interest": "Networking",
+                    "created_at": "2017-07-24T02:41:05.640Z",
+                    "updated_at": "2017-07-24T03:14:39.767Z"
+                
+                } 
+            ]
+
+
+### Remove an Extra Curricular Activity [DELETE]
+
++ Request (application/json)
+
+        [
+            {
+   
+                "name": "Mehedi Hasan Jony",
+                "department": "ICE",
+                "interest": "Networking"
+     
+            }
+        ]
+    
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: localhost:3000/extracurricularactivities/8
+
+    
